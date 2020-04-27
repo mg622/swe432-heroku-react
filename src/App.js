@@ -9,6 +9,8 @@ import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 import {Rating} from "@material-ui/lab";
 
+import Navbar from './Navbar';
+
 import './App.css';
 import Fetcher from './components/Fetcher';
 import Hooks, {aFunc} from './components/Hooks';
@@ -46,9 +48,17 @@ const changeVSE = (e5, newVSE) => { setRatingVSE(newVSE); };
   return (
     <>
      <div align = "center">
-      <h1>SWE 432: Assignment 7</h1>
-      <p>Mei Gibbons </p>
+      <h1>Best Place to Study</h1>
+      <p>Fill out the form to rate study areas on campus!</p>
       </div>
+    
+    <form>
+      <label>
+        Location:
+          <input type="text" name="name" />
+      </label>
+      <input type="submit" value="Submit" />
+    </form>
       
       <Grid container direction="column" justify="space-evenly" alignItems="center">
     <FormControl component="fieldset">
