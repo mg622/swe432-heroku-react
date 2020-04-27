@@ -47,7 +47,7 @@ const changeVSE = (e5, newVSE) => { setRatingVSE(newVSE); };
     <>
      <div align = "center">
       <h1>SWE 432: Assignment 7</h1>
-      <p>Partners: Megan Ngo and Thomas Rigger </p>
+      <p>Mei Gibbons </p>
       </div>
       
       <Grid container direction="column" justify="space-evenly" alignItems="center">
