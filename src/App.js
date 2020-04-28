@@ -47,18 +47,19 @@ const changeVSE = (e5, newVSE) => { setRatingVSE(newVSE); };
     
     
      <div align = "center">
-      <h1>Best Place to Study</h1>
-      <p>Fill out the form to rate study areas on campus!</p>
+        <h1>Best Place to Study</h1>
+        <p>Fill out the form to rate study areas on campus!</p>
       </div>
     
     <Grid className="center aligned">
-    <form>
-      <label>
-        Location:  
-          <input type="text" name="name" />
-      </label>
-      <input type="submit" value="Submit" />
-    </form>
+      <form>
+        <label>
+          Location:  
+            <input type="text" name="name" />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+    </Grid>
       
       <Grid container direction="column" justify="space-evenly" alignItems="center">
     <FormControl component="fieldset">
@@ -98,7 +99,7 @@ const changeVSE = (e5, newVSE) => { setRatingVSE(newVSE); };
     <p></p>
 
      
-<p></p><p></p><p></p>
+<p></p><p></p>
         <button onclick="printValues()" id="printV">Submit</button> 
   
 <p></p>
