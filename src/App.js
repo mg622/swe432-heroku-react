@@ -15,9 +15,9 @@ import Hooks, {aFunc} from './components/Hooks';
 
 function App() {
 
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
+  //const handleChange = (event) => {
+    //setValue(event.target.value);
+  //};
 
   const [loading, setLoading] = useState(true);
 const [ratingNL, setRatingNL] = useState(2.5);
@@ -25,9 +25,9 @@ const [ratingCD, setRatingCD] = useState(2.5);
 const [ratingCM, setRatingCM] = useState(2.5);
 
 
-const changeNL = (e1, newNL) => { setRatingJC(newNL); };
-const changeCD = (e2, newCD) => { setRatingFW(newCD); };
-const changeCM = (e3, newCM) => { setRatingRHB(newCM); };
+const changeNL = (e1, newNL) => { setRatingNL(newNL); };
+const changeCD = (e2, newCD) => { setRatingCD(newCD); };
+const changeCM = (e3, newCM) => { setRatingCM(newCM); };
 
 
   useEffect(() => {
