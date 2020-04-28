@@ -51,15 +51,14 @@ const changeVSE = (e5, newVSE) => { setRatingVSE(newVSE); };
         <p>Fill out the form to rate study areas on campus!</p>
       </div>
     
-    <Grid className="center aligned">
+    <div align = "center">
       <form>
         <label>
           Location:  
             <input type="text" name="name" />
         </label>
-        <input type="submit" value="Submit" />
       </form>
-    </Grid>
+    </div>
       
       <Grid container direction="column" justify="space-evenly" alignItems="center">
     <FormControl component="fieldset">
@@ -77,7 +76,7 @@ const changeVSE = (e5, newVSE) => { setRatingVSE(newVSE); };
  <p>Rating for Noise Level (fewer stars means louder): </p>
 
  <Grid container direction="column" justify="space-evenly" alignItems="center">
-       <FormLabel component="legend">Johnson Center</FormLabel>
+       <FormLabel component="legend">Noise Level</FormLabel>
       <Rating name = "Noise Level" id="JC" JC={ratingJC} precision={0.5} defaultValue={2.5} onChange={changeJC} />
     </ Grid>
      <p></p>
@@ -85,7 +84,7 @@ const changeVSE = (e5, newVSE) => { setRatingVSE(newVSE); };
   <p>Rating for Crowdedness (fewer stars means more crowded): </p>
 
      <Grid container direction="column" justify="space-evenly" alignItems="center">
-          <FormLabel component="legend">Fenwick Library</FormLabel>
+          <FormLabel component="legend">Crowdedness</FormLabel>
     <Rating name = "Crowdedness" id="FW" FW={ratingFW} precision={0.5} defaultValue={2.5} onChange={changeFW} />
     </ Grid>
      <p></p>
@@ -93,7 +92,7 @@ const changeVSE = (e5, newVSE) => { setRatingVSE(newVSE); };
   <p>Rating for Comfort of Seats(fewer stars means less comfortable): </p>
 
      <Grid container direction="column" justify="space-evenly" alignItems="center">
-        <FormLabel component="legend">Robinson Hall B</FormLabel>
+        <FormLabel component="legend">Comfort/FormLabel>
       <Rating name = "Comfort" id="RHB" RHB={ratingRHB} precision={0.5} defaultValue={2.5} onChange={changeRHB} />
       </ Grid>
     <p></p>
