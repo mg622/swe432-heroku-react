@@ -91,7 +91,7 @@ const changeVSE = (e5, newVSE) => { setRatingVSE(newVSE); };
   <p>Rating for Comfort of Seats(fewer stars means less comfortable): </p>
 
      <Grid container direction="column" justify="space-evenly" alignItems="center">
-        <FormLabel component="legend">Comfort/FormLabel>
+        <FormLabel component="legend">Comfort</FormLabel>
       <Rating name = "Comfort" id="RHB" RHB={ratingRHB} precision={0.5} defaultValue={2.5} onChange={changeRHB} />
       </ Grid>
     <p></p>
