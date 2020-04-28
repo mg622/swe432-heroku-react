@@ -49,17 +49,16 @@ const changeVSE = (e5, newVSE) => { setRatingVSE(newVSE); };
      <div align = "center">
         <h1>Best Place to Study</h1>
         <p>Fill out the form to rate study areas on campus!</p>
+    
+        <form>
+          <label>
+            Location:  
+              <input type="text" name="name" />
+          </label>
+        </form>
       </div>
     
-    <div align = "center">
-      <form>
-        <label>
-          Location:  
-            <input type="text" name="name" />
-        </label>
-      </form>
-    </div>
-      
+    
       <Grid container direction="column" justify="space-evenly" alignItems="center">
     <FormControl component="fieldset">
       <FormLabel component="legend">School Year</FormLabel>
