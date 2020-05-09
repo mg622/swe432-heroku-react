@@ -19,12 +19,14 @@ function App() {
     //setValue(event.target.value);
   //};
 
-  const [loading, setLoading] = useState(true);
+const [loading, setLoading] = useState(true);
+const [ratingL, setRatingL] = useState(2.5);
 const [ratingNL, setRatingNL] = useState(2.5);
 const [ratingCD, setRatingCD] = useState(2.5);
 const [ratingCM, setRatingCM] = useState(2.5);
 
 
+const changeL = (e0, newL) => { setRatingL(newL); };
 const changeNL = (e1, newNL) => { setRatingNL(newNL); };
 const changeCD = (e2, newCD) => { setRatingCD(newCD); };
 const changeCM = (e3, newCM) => { setRatingCM(newCM); };
@@ -43,18 +45,21 @@ const changeCM = (e3, newCM) => { setRatingCM(newCM); };
      <div align = "center">
         <h1>Best Place to Study</h1>
         <p>Fill out the form to rate study areas on campus!</p>
-    
-        <form>
-          <label>
-            Location:  
-              <input type="text" name="name" />
-          </label>
-        </form>
         <p></p>
       </div>
     
 
     <div align = "center">
+    
+      <p>Location: <input type="text" name="name" /> </p>
+        <Grid container direction="column" justify="space-evenly" alignItems="center">
+          <FormLabel component="legend"></FormLabel>
+            <Rating name="Location" id="L" L={ratingL} precision={0.5} defaultValue={2.5} onChange={changeL} />
+        </ Grid>
+      <p></p>
+    
+    
+    
  <p>Rating for Noise Level (fewer stars means louder): </p>
 
  <Grid container direction="column" justify="space-evenly" alignItems="center">
