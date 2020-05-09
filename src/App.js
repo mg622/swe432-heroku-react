@@ -23,7 +23,7 @@ class App extends Component {
     	this.state = {response: null};
 	}
 	
-	const [loading, setLoading] = useState(true);
+	//const [loading, setLoading] = useState(true);
 	//const [ratingL, setRatingL] = useState(2.5);
 	const [ratingNL, setRatingNL] = useState(2.5);
 	const [ratingCD, setRatingCD] = useState(2.5);
