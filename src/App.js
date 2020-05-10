@@ -74,7 +74,6 @@ class App extends Component {
   render() {
     return (      
       <div id = "container">
-      <form method="POST" action="https://swe432-mei-gibbons.herokuapp.com/result" >
         <div align = "center">
           <h1>Best Place to Study on Campus</h1>
           <h2>Fill out the form to rate study areas on campus!</h2>
@@ -155,13 +154,13 @@ class App extends Component {
             <br/>
 
 
-            <button type="submit">Submit</button>
+            <Button onClick={this.fetchData} color="primary" data-something="submit">submit</Button> 
             <br/> 
 
     			</div>
           <div align = "center">
             <Paper elevation={1} style={
-                {height:100, width:500, wordBreak: "break-all", padding:4}
+                {height:500, width:1000, wordBreak: "break-all", padding:4}
             } >
               {this.state.response?JSON.stringify(this.state.response, null, 1):
                 (<p>
@@ -169,7 +168,6 @@ class App extends Component {
                 </p>)}
             </Paper>
           </div>
-         </form>
       </div>
     );
   }
