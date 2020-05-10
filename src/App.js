@@ -93,7 +93,7 @@ class App extends Component {
     			
     		<strong>Location:</strong>
     	    <br/>
-            	<input type="text" onChange={this.handleChange} id="theLoc" name="loc" style={{display:'inline'}}  />
+            	<input type="text" onChange={this.handleChange} id="theLoc" name="loc" style={{display:'inline'}}  <b></br> />
     	    <br/>
     			
     			
@@ -157,7 +157,7 @@ class App extends Component {
 
 
             <Button onClick={this.fetchData} color="primary" data-something="submit">
-                 submit</Button> <br></br>
+                 submit</Button> <p> </p>
 
     			</div>
           <div align = "center">
