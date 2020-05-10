@@ -57,16 +57,13 @@ class App extends Component {
         const res = await fetch(url,
           {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
-            mode: 'cors', // no-cors, *cors, same-origin
-            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-            //credentials: 'same-origin', // include, *same-origin, omit
+            mode: 'cors', 
+            cache: 'no-cache', 
             headers: {
-              // 'Content-Type': 'application/json'
+              
               'Content-Type': 'application/x-www-form-urlencoded',
             },
-            //redirect: 'follow', // manual, *follow, error
-            //referrerPolicy: 'no-referrer', // no-referrer, *client
-            body  // body data type must match "Content-Type" header
+            body 
           }
         );
         const json = await res.json();
@@ -92,7 +89,7 @@ class App extends Component {
 
     			<div id = "formQuestions" align = "center">
     			
-    		<strong>Location:</strong>
+    		<strong>Location: &nbsp;</strong>
     	    
             	<input type="text" onChange={this.handleChange} id="theLoc" name="loc" style={{display:'inline'}}  /> 
     	    
@@ -121,16 +118,16 @@ class App extends Component {
     	      
 
     	      <br/><input type="radio" onChange={this.handleChange} id="one" name="crowd" value="1"/>
-    	      <label htmlFor="one">1</label> 
+    	      <label htmlFor="one">1 &nbsp;</label> 
     	      
     	      <input type="radio" onChange={this.handleChange} id="two" name="crowd" value="2"/>
-    	      <label htmlFor="two">2</label> 
+    	      <label htmlFor="two">2 &nbsp;</label> 
     	      
     	      <input type="radio" onChange={this.handleChange} id="three" name="crowd" value="3"/>
-    	      <label htmlFor="three">3</label> 
+    	      <label htmlFor="three">3 &nbsp;</label> 
     	      
     	      <input type="radio" onChange={this.handleChange} id="four" name="crowd" value="4"/>
-    	      <label htmlFor="four">4</label>
+    	      <label htmlFor="four">4 &nbsp;</label>
     	      
     	      <input type="radio" onChange={this.handleChange} id="five" name="crowd" value="5"/>
     	      <label htmlFor="five">5</label> <br/>
@@ -141,16 +138,16 @@ class App extends Component {
     	     
 
     	      <br/><input type="radio" onChange={this.handleChange} id="one" name="comfort" value="1"/>
-    	      <label htmlFor="one">1</label> 
+    	      <label htmlFor="one">1 &nbsp;</label> 
     	      
     	      <input type="radio" onChange={this.handleChange} id="two" name="comfort" value="2"/>
-    	      <label htmlFor="two">2</label> 
+    	      <label htmlFor="two">2 &nbsp;</label> 
     	      
     	      <input type="radio" onChange={this.handleChange} id="three" name="comfort" value="3"/>
-    	      <label htmlFor="three">3</label> 
+    	      <label htmlFor="three">3 &nbsp;</label> 
     	      
     	      <input type="radio" onChange={this.handleChange} id="four" name="comfort" value="4"/>
-    	      <label htmlFor="four">4</label> 
+    	      <label htmlFor="four">4 &nbsp;</label> 
     	      
     	      <input type="radio" onChange={this.handleChange} id="five" name="comfort" value="5"/>
     	      <label htmlFor="five">5</label> <br/>
