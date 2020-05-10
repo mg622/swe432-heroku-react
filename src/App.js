@@ -94,13 +94,13 @@ class App extends Component {
     		<strong>Location:</strong>
     	    
             	<input type="text" onChange={this.handleChange} id="theLoc" name="loc" style={{display:'inline'}}  />
-    	    <br/>
+    	    
     			
     			
-            <strong>Rating for Noise Level:</strong> (1-very loud, 5-silent)
+            <br/><strong>Rating for Noise Level:</strong> (1-very loud, 5-silent)
            
 
-    	      <input type="radio" onChange={this.handleChange} id="one" name="noiseLevel" value="1" />
+    	      <br/><input type="radio" onChange={this.handleChange} id="one" name="noiseLevel" value="1" />
     	      <label htmlFor="one">1</label> 
     	      
     	      <input type="radio"  onChange={this.handleChange} id="two" name="noiseLevel" value="2" />
@@ -114,12 +114,12 @@ class App extends Component {
     	      
     	      <input type="radio"  onChange={this.handleChange} id="five" name="noiseLevel" value="5" />
     	      <label htmlFor="five">5</label> 
-            <br/> 
+            
 
-    	      <strong>Rating for Crowdedness:</strong> (1-way too crowded, 5-hardly any people)
+    	      <br/><strong>Rating for Crowdedness:</strong> (1-way too crowded, 5-hardly any people)
     	      
 
-    	      <input type="radio" onChange={this.handleChange} id="one" name="crowd" value="1"/>
+    	      <br/><input type="radio" onChange={this.handleChange} id="one" name="crowd" value="1"/>
     	      <label htmlFor="one">1</label> 
     	      
     	      <input type="radio" onChange={this.handleChange} id="two" name="crowd" value="2"/>
@@ -133,13 +133,13 @@ class App extends Component {
     	      
     	      <input type="radio" onChange={this.handleChange} id="five" name="crowd" value="5"/>
     	      <label htmlFor="five">5</label>
-          <br/>
+          
     	    
 
-    	      <strong>Rating for Comfort of Seats:</strong> (1-uncomfortable, 5-very comfortable)
+    	      <br/><strong>Rating for Comfort of Seats:</strong> (1-uncomfortable, 5-very comfortable)
     	     
 
-    	      <input type="radio" onChange={this.handleChange} id="one" name="comfort" value="1"/>
+    	      <br/><input type="radio" onChange={this.handleChange} id="one" name="comfort" value="1"/>
     	      <label htmlFor="one">1</label> 
     	      
     	      <input type="radio" onChange={this.handleChange} id="two" name="comfort" value="2"/>
