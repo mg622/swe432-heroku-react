@@ -94,7 +94,7 @@ class App extends Component {
     		<strong>Location:</strong>
     	    
             	<input type="text" onChange={this.handleChange} id="theLoc" name="loc" style={{display:'inline'}}  />
-    	    <br>
+    	    <br/>
     			
     			
             <strong>Rating for Noise Level:</strong> (1-very loud, 5-silent)
@@ -114,7 +114,7 @@ class App extends Component {
     	      
     	      <input type="radio"  onChange={this.handleChange} id="five" name="noiseLevel" value="5" />
     	      <label htmlFor="five">5</label> 
-            <br> 
+            <br/> 
 
     	      <strong>Rating for Crowdedness:</strong> (1-way too crowded, 5-hardly any people)
     	      
@@ -133,7 +133,7 @@ class App extends Component {
     	      
     	      <input type="radio" onChange={this.handleChange} id="five" name="crowd" value="5"/>
     	      <label htmlFor="five">5</label>
-          <br>
+          <br/>
     	    
 
     	      <strong>Rating for Comfort of Seats:</strong> (1-uncomfortable, 5-very comfortable)
@@ -153,12 +153,12 @@ class App extends Component {
     	      
     	      <input type="radio" onChange={this.handleChange} id="five" name="comfort" value="5"/>
     	      <label htmlFor="five">5</label>
-            <br>
+            <br/>
 
 
             <Button onClick={this.fetchData} color="primary" data-something="submit">
                  submit</Button> 
-            <br> 
+            <br/> 
 
     			</div>
           <div align = "center">
