@@ -1,72 +1,62 @@
-import React, { useEffect, useState } from 'react';
-import Paper from '@material-ui/core/Paper'; 
-import Grid from '@material-ui/core/Grid';
+import React, { Component } from "react";
+import { Paper, Button } from '@material-ui/core';
 
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormControl from '@material-ui/core/FormControl';
-import FormLabel from '@material-ui/core/FormLabel';
-import {Rating} from "@material-ui/lab";
+const publicURL = 'https://swe432-mei-gibbons.herokuapp.com';
+var noiseLevel = null;
 
-import './App.css';
-import Fetcher from './components/Fetcher';
-import Hooks, {aFunc} from './components/Hooks';
+var crowd = null;
+var comfort = null;
 
+var loc = null;
 
-var location = null;
+export const getLocationUrlData = () => {
+  return {
+      url:
+          process.env.NODE_ENV === 'production'?
+          publicURL
+          :`${window.location.origin}`,
+      hash: `${window.location.hash}`
+  };
+};
+export const servicePath ='/result';
+
+const url = `${getLocationUrlData().url}${servicePath}`;
+
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {response: null};
+  }
 
-	/*constructor(props) {
-    		super(props);
-    		this.state = {response: null};
-	}*/
-	
-	const [loading, setLoading] = useState(true);
-	//const [ratingL, setRatingL] = useState(2.5);
-	const [ratingNL, setRatingNL] = useState(2.5);
-	const [ratingCD, setRatingCD] = useState(2.5);
-	const [ratingCM, setRatingCM] = useState(2.5);
+  handleChange = event => {
+    if(event.target.name === "noiseLevel") {
+      noiseLevel = event.target.value;
+    }
+    if(event.target.name === "crowd") {
+      crowd = event.target.value;
+    }
+    if(event.target.name === "comfort") {
+      comfort = event.target.value;
+    }
+    
+    if(event.target.name === "loc") {
+      loc = event.target.value;
+      var theLoc = document.getElementById('theLoc');
+	  theLoc.style.display='block';
+    }
+  };
 
-
-	//const changeL = (e0, newL) => { setRatingL(newL); };
-	const changeNL = (e1, newNL) => { setRatingNL(newNL); };
-	const changeCD = (e2, newCD) => { setRatingCD(newCD); };
-	const changeCM = (e3, newCM) => { setRatingCM(newCM); };
-
-  //const handleChange = (event) => {
-    //setValue(event.target.value);
-  //};
-  
-	handleChange = changeEvent => {
-    	if(changeEvent.target.name === "location") {
-      		location = changeEvent.target.value;
-      		var otherText = document.getElementById('otherText');
-      		otherText.style.display='block'
-    	}
-    	/*if(changeEvent.target.name === "noiseLevel") {
-      		noiseLevel = changeEvent.target.value;
-    	}
-    	if(changeEvent.target.name === "crowdedness") {
-     		crowdedness = changeEvent.target.value;
-    	}
-    	if(changeEvent.target.name === "comfort") {
-     		comfort = changeEvent.target.value;
-    	}*/
-    	
-	};
-	
-	
-	fetchData = async()=>{
-        location = document.getElementById('otherText').value;
+  fetchData = async()=>{
         
-        const body = `location=${location}`;
+        loc=document.getElementById('theLoc').value;
+        
+        const body = `noiseLevel=${noiseLevel}&crowd=${crowd}&comfort=${comfort}&loc=${loc}`;
 
         console.log("Before fetch");
-        const res = await fetch('https://cs.gmu.edu:8443/offutt/servlet/formHandler',
+        const res = await fetch(url,
           {
-            method: 'POST', 
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
             mode: 'cors', // no-cors, *cors, same-origin
             cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
             //credentials: 'same-origin', // include, *same-origin, omit
@@ -84,67 +74,109 @@ class App extends Component {
         this.setState({response: json});
   }
 
+  render() {
+    return (
+      <div id = "container">
+        <div align = "center">
+          <h1>Best Place to Study on Campus</h1>
+          <h2>Fill out the form to rate study areas on campus!</h2>
+        </div>
+        
+        <div align = "center">
+    			<p>
+          Assignment 7 - Mei Gibbons
+    			</p>
+    			<p>
+          <br/>
+    			Please fill out the following survey to the best of your ability and answer all of the questions.
+    			<br/>
+    			</p>
+        </div>
+
+    			<div id = "formQuestions" align = "center">
+    			
+    		Location
+    	    <br/>
+            	<input type="text" onChange={this.handleChange} id="theLoc" name="loc" style={{display:'none'}}  />
+    	    <br/>
+    			
+    			
+            Rating for Noise Level: (1-very loud, 5-silent)
+            <br/>
+
+    	      <input type="radio" onChange={this.handleChange} id="one" name="noiseLevel" value="1" />
+    	      <label htmlFor="one">1</label><br/>
+    	      
+    	      <input type="radio"  onChange={this.handleChange} id="two" name="noiseLevel" value="2" />
+    	      <label htmlFor="two">2</label><br/>
+    	      
+    	      <input type="radio" onChange={this.handleChange} id="three" name="noiseLevel" value="3" />
+    	      <label htmlFor="three">3</label><br/>
+    	      
+    	      <input type="radio"  onChange={this.handleChange} id="four" name="noiseLevel" value="4" />
+    	      <label htmlFor="four">4</label><br/>
+    	      
+    	      <input type="radio"  onChange={this.handleChange} id="five" name="noiseLevel" value="5" />
+    	      <label htmlFor="five">5</label><br/>
+    	    
+    	    <br/>
+
+    	      Rating for Crowdedness: (1-way too crowded, 5-hardly any people)
+    	      <br/>
+
+    	      <input type="radio" onChange={this.handleChange} id="one" name="crowd" value="1"/>
+    	      <label htmlFor="one">1</label><br/>
+    	      
+    	      <input type="radio" onChange={this.handleChange} id="two" name="crowd" value="2"/>
+    	      <label htmlFor="two">2</label><br/>
+    	      
+    	      <input type="radio" onChange={this.handleChange} id="three" name="crowd" value="3"/>
+    	      <label htmlFor="three">3</label><br/>
+    	      
+    	      <input type="radio" onChange={this.handleChange} id="four" name="crowd" value="4"/>
+    	      <label htmlFor="four">4</label><br/>
+    	      
+    	      <input type="radio" onChange={this.handleChange} id="five" name="crowd" value="5"/>
+    	      <label htmlFor="five">5</label><br/>
+    	      <br/>
+
+    	      Rating for Comfort of Seats: (1-uncomfortable, 5-very comfortable)
+    	      <br/>
+
+    	      <input type="radio" onChange={this.handleChange} id="one" name="comfort" value="1"/>
+    	      <label htmlFor="one">1</label><br/>
+    	      
+    	      <input type="radio" onChange={this.handleChange} id="two" name="comfort" value="2"/>
+    	      <label htmlFor="two">2</label><br/>
+    	      
+    	      <input type="radio" onChange={this.handleChange} id="three" name="comfort" value="3"/>
+    	      <label htmlFor="three">3</label><br/>
+    	      
+    	      <input type="radio" onChange={this.handleChange} id="four" name="comfort" value="4"/>
+    	      <label htmlFor="four">4</label><br/>
+    	      
+    	      <input type="radio" onChange={this.handleChange} id="five" name="comfort" value="5"/>
+    	      <label htmlFor="five">5</label><br/>
+    	      <br/>
 
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 5000);
-  }, [])
+            <Button onClick={this.fetchData} color="primary" data-something="submit">
+                 submit</Button>
 
-	render() {
-		return (
-				<>
-	
-			 <div align = "center">
-				<h1>Best Place to Study</h1>
-				<p>Fill out the form to rate study areas on campus!</p>
-				<p></p>
-			  </div>
-	
+    			</div>
+          <div align = "center">
+            <Paper elevation={1} style={
+                {height:100, width:500, wordBreak: "break-all", padding:4}
+            } >
+              {this.state.response?JSON.stringify(this.state.response, null, 1):
+                (<p>
 
-			<div align = "center">
-	
-			  <p>Location: <input type="text" onChange={this.handleOptionChange} id="otherText" name="location" style={{display:'none'}}  /> </p>
-				<Grid container direction="column" justify="space-evenly" alignItems="center">
-				  <FormLabel component="legend"></FormLabel>
-				</ Grid>
-			  <p></p>
-	
-	
-			 <p>Rating for Noise Level (fewer stars means louder): </p>
-
-			 <Grid container direction="column" justify="space-evenly" alignItems="center">
-				   <FormLabel component="legend">Noise Level</FormLabel>
-				  <Rating name = "Noise Level" id="NL" NL={ratingNL} precision={0.5} defaultValue={2.5} onChange={changeNL} />
-				</ Grid>
-				 <p></p>
-  
-			  <p>Rating for Crowdedness (fewer stars means more crowded): </p>
-
-				 <Grid container direction="column" justify="space-evenly" alignItems="center">
-					  <FormLabel component="legend">Crowdedness</FormLabel>
-				<Rating name = "Crowdedness" id="CD" CD={ratingCD} precision={0.5} defaultValue={2.5} onChange={changeCD} />
-				</ Grid>
-				 <p></p>
-  
-			  <p>Rating for Comfort of Seats (fewer stars means less comfortable): </p>
-
-				 <Grid container direction="column" justify="space-evenly" alignItems="center">
-					<FormLabel component="legend">Comfort</FormLabel>
-				  <Rating name = "Comfort" id="CM" CM={ratingCM} precision={0.5} defaultValue={2.5} onChange={changeCM} />
-				  </ Grid>
-				<p></p>
-
-	 
-			<p></p><p></p>
-			<button onClick={this.fetchData} >Submit</button> 
-  
-		  </div>
-
-		</>
-  		);
-	}
+                </p>)}
+            </Paper>
+          </div>
+      </div>
+    );
+  }
 }
 
 export default App;
