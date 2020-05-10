@@ -91,9 +91,9 @@ class App extends Component {
 
     			<div id = "formQuestions" align = "center">
     			
-    		<strong>Location</strong>
+    		<strong>Location:</strong>
     	    <br/>
-            	<input type="text" onChange={this.handleChange} id="theLoc" name="loc" style={{display:'block'}}  />
+            	<input type="text" onChange={this.handleChange} id="theLoc" name="loc" style={{display:'inline'}}  />
     	    <br/>
     			
     			
@@ -101,16 +101,16 @@ class App extends Component {
             <br/>
 
     	      <input type="radio" onChange={this.handleChange} id="one" name="noiseLevel" value="1" />
-    	      <label htmlFor="one">1</label> &nbsp
+    	      <label htmlFor="one">1</label> 
     	      
     	      <input type="radio"  onChange={this.handleChange} id="two" name="noiseLevel" value="2" />
-    	      <label htmlFor="two">2</label> &nbsp
+    	      <label htmlFor="two">2</label>
     	      
     	      <input type="radio" onChange={this.handleChange} id="three" name="noiseLevel" value="3" />
-    	      <label htmlFor="three">3</label> &nbsp
+    	      <label htmlFor="three">3</label> 
     	      
     	      <input type="radio"  onChange={this.handleChange} id="four" name="noiseLevel" value="4" />
-    	      <label htmlFor="four">4</label> &nbsp
+    	      <label htmlFor="four">4</label> 
     	      
     	      <input type="radio"  onChange={this.handleChange} id="five" name="noiseLevel" value="5" />
     	      <label htmlFor="five">5</label><br/>
@@ -121,16 +121,16 @@ class App extends Component {
     	      <br/>
 
     	      <input type="radio" onChange={this.handleChange} id="one" name="crowd" value="1"/>
-    	      <label htmlFor="one">1</label> &nbsp
+    	      <label htmlFor="one">1</label> 
     	      
     	      <input type="radio" onChange={this.handleChange} id="two" name="crowd" value="2"/>
-    	      <label htmlFor="two">2</label> &nbsp
+    	      <label htmlFor="two">2</label> 
     	      
     	      <input type="radio" onChange={this.handleChange} id="three" name="crowd" value="3"/>
-    	      <label htmlFor="three">3</label> &nbsp
+    	      <label htmlFor="three">3</label> 
     	      
     	      <input type="radio" onChange={this.handleChange} id="four" name="crowd" value="4"/>
-    	      <label htmlFor="four">4</label> &nbsp
+    	      <label htmlFor="four">4</label>
     	      
     	      <input type="radio" onChange={this.handleChange} id="five" name="crowd" value="5"/>
     	      <label htmlFor="five">5</label><br/>
@@ -140,16 +140,16 @@ class App extends Component {
     	      <br/>
 
     	      <input type="radio" onChange={this.handleChange} id="one" name="comfort" value="1"/>
-    	      <label htmlFor="one">1</label> &nbsp
+    	      <label htmlFor="one">1</label> 
     	      
     	      <input type="radio" onChange={this.handleChange} id="two" name="comfort" value="2"/>
-    	      <label htmlFor="two">2</label> &nbsp
+    	      <label htmlFor="two">2</label> 
     	      
     	      <input type="radio" onChange={this.handleChange} id="three" name="comfort" value="3"/>
-    	      <label htmlFor="three">3</label> &nbsp
+    	      <label htmlFor="three">3</label> 
     	      
     	      <input type="radio" onChange={this.handleChange} id="four" name="comfort" value="4"/>
-    	      <label htmlFor="four">4</label> &nbsp
+    	      <label htmlFor="four">4</label> 
     	      
     	      <input type="radio" onChange={this.handleChange} id="five" name="comfort" value="5"/>
     	      <label htmlFor="five">5</label><br/>
