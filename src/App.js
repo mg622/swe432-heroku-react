@@ -101,16 +101,16 @@ class App extends Component {
            
 
     	      <br/><input type="radio" onChange={this.handleChange} id="one" name="noiseLevel" value="1" />
-    	      <label htmlFor="one">1</label> 
+    	      <label htmlFor="one">1&nbsp</label> 
     	      
     	      <input type="radio"  onChange={this.handleChange} id="two" name="noiseLevel" value="2" />
-    	      <label htmlFor="two">2</label>
+    	      <label htmlFor="two">2&nbsp</label>
     	      
     	      <input type="radio" onChange={this.handleChange} id="three" name="noiseLevel" value="3" />
-    	      <label htmlFor="three">3</label> 
+    	      <label htmlFor="three">3&nbsp</label> 
     	      
     	      <input type="radio"  onChange={this.handleChange} id="four" name="noiseLevel" value="4" />
-    	      <label htmlFor="four">4</label> 
+    	      <label htmlFor="four">4&nbsp</label> 
     	      
     	      <input type="radio"  onChange={this.handleChange} id="five" name="noiseLevel" value="5" />
     	      <label htmlFor="five">5</label> <br/>
