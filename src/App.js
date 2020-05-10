@@ -92,13 +92,13 @@ class App extends Component {
     			<div id = "formQuestions" align = "center">
     			
     		<strong>Location:</strong>
-    	    <br/>
-            	<input type="text" onChange={this.handleChange} id="theLoc" name="loc" style={{display:'inline'}}  <b></br> />
+    	    <br>
+            	<input type="text" onChange={this.handleChange} id="theLoc" name="loc" style={{display:'inline'}}  />
     	    <br/>
     			
     			
             <strong>Rating for Noise Level:</strong> (1-very loud, 5-silent)
-            <br/>
+           
 
     	      <input type="radio" onChange={this.handleChange} id="one" name="noiseLevel" value="1" />
     	      <label htmlFor="one">1</label> 
@@ -113,12 +113,10 @@ class App extends Component {
     	      <label htmlFor="four">4</label> 
     	      
     	      <input type="radio"  onChange={this.handleChange} id="five" name="noiseLevel" value="5" />
-    	      <label htmlFor="five">5</label><br/>
-    	    
-    	    <br/>
+    	      <label htmlFor="five">5</label> <br> <br/>
 
     	      <strong>Rating for Crowdedness:</strong> (1-way too crowded, 5-hardly any people)
-    	      <br/>
+    	      
 
     	      <input type="radio" onChange={this.handleChange} id="one" name="crowd" value="1"/>
     	      <label htmlFor="one">1</label> 
@@ -133,11 +131,11 @@ class App extends Component {
     	      <label htmlFor="four">4</label>
     	      
     	      <input type="radio" onChange={this.handleChange} id="five" name="crowd" value="5"/>
-    	      <label htmlFor="five">5</label><br/>
+    	      <label htmlFor="five">5</label><br>
     	      <br/>
 
     	      <strong>Rating for Comfort of Seats:</strong> (1-uncomfortable, 5-very comfortable)
-    	      <br/>
+    	     
 
     	      <input type="radio" onChange={this.handleChange} id="one" name="comfort" value="1"/>
     	      <label htmlFor="one">1</label> 
@@ -152,12 +150,13 @@ class App extends Component {
     	      <label htmlFor="four">4</label> 
     	      
     	      <input type="radio" onChange={this.handleChange} id="five" name="comfort" value="5"/>
-    	      <label htmlFor="five">5</label><br/>
+    	      <label htmlFor="five">5</label><br>
     	      <br/>
 
 
             <Button onClick={this.fetchData} color="primary" data-something="submit">
-                 submit</Button> <p> </p>
+                 submit</Button> 
+            <p> </p>
 
     			</div>
           <div align = "center">
