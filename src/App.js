@@ -30,6 +30,11 @@ class App extends Component {
   }
 
   handleChange = event => {
+    if(event.target.name === "loc") {
+      loc = event.target.value;
+      var theLoc = document.getElementById('theLoc');
+    }
+    
     if(event.target.name === "noiseLevel") {
       noiseLevel = event.target.value;
     }
@@ -40,17 +45,13 @@ class App extends Component {
       comfort = event.target.value;
     }
     
-    if(event.target.name === "loc") {
-      loc = event.target.value;
-      var theLoc = document.getElementById('theLoc');
-    }
   };
 
   fetchData = async()=>{
         
         loc=document.getElementById('theLoc').value;
         
-        const body = `noiseLevel=${noiseLevel}&crowd=${crowd}&comfort=${comfort}&loc=${loc}`;
+        const body = `loc=${loc}&noiseLevel=${noiseLevel}&crowd=${crowd}&comfort=${comfort}`;
 
         console.log("Before fetch");
         const res = await fetch(url,
@@ -101,16 +102,16 @@ class App extends Component {
            
 
     	      <br/><input type="radio" onChange={this.handleChange} id="one" name="noiseLevel" value="1" />
-    	      <label htmlFor="one">1&nbsp</label> 
+    	      <label htmlFor="one">1 &nbsp; </label> 
     	      
     	      <input type="radio"  onChange={this.handleChange} id="two" name="noiseLevel" value="2" />
-    	      <label htmlFor="two">2&nbsp</label>
+    	      <label htmlFor="two">2 &nbsp; </label>
     	      
     	      <input type="radio" onChange={this.handleChange} id="three" name="noiseLevel" value="3" />
-    	      <label htmlFor="three">3&nbsp</label> 
+    	      <label htmlFor="three">3 &nbsp; </label> 
     	      
     	      <input type="radio"  onChange={this.handleChange} id="four" name="noiseLevel" value="4" />
-    	      <label htmlFor="four">4&nbsp</label> 
+    	      <label htmlFor="four">4 &nbsp; </label> 
     	      
     	      <input type="radio"  onChange={this.handleChange} id="five" name="noiseLevel" value="5" />
     	      <label htmlFor="five">5</label> <br/>
