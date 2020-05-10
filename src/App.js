@@ -169,6 +169,7 @@ class App extends Component {
                 </p>)}
             </Paper>
           </div>
+         </form>
       </div>
     );
   }
