@@ -93,11 +93,11 @@ class App extends Component {
     			
     		<strong>Location:</strong>
     	    
-            	<input type="text" onChange={this.handleChange} id="theLoc" name="loc" style={{display:'inline'}}  />
+            	<input type="text" onChange={this.handleChange} id="theLoc" name="loc" style={{display:'inline'}}  /> 
     	    
     			
     			
-            <br/><strong>Rating for Noise Level:</strong> (1-very loud, 5-silent)
+            <br/><br/><strong>Rating for Noise Level:</strong> (1-very loud, 5-silent)
            
 
     	      <br/><input type="radio" onChange={this.handleChange} id="one" name="noiseLevel" value="1" />
@@ -113,7 +113,7 @@ class App extends Component {
     	      <label htmlFor="four">4</label> 
     	      
     	      <input type="radio"  onChange={this.handleChange} id="five" name="noiseLevel" value="5" />
-    	      <label htmlFor="five">5</label> 
+    	      <label htmlFor="five">5</label> <br/>
             
 
     	      <br/><strong>Rating for Crowdedness:</strong> (1-way too crowded, 5-hardly any people)
@@ -132,7 +132,7 @@ class App extends Component {
     	      <label htmlFor="four">4</label>
     	      
     	      <input type="radio" onChange={this.handleChange} id="five" name="crowd" value="5"/>
-    	      <label htmlFor="five">5</label>
+    	      <label htmlFor="five">5</label> <br/>
           
     	    
 
@@ -152,7 +152,7 @@ class App extends Component {
     	      <label htmlFor="four">4</label> 
     	      
     	      <input type="radio" onChange={this.handleChange} id="five" name="comfort" value="5"/>
-    	      <label htmlFor="five">5</label>
+    	      <label htmlFor="five">5</label> <br/>
             <br/>
 
 
