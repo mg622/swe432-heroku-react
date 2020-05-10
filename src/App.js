@@ -118,16 +118,16 @@ class App extends Component {
     	      
 
     	      <br/><input type="radio" onChange={this.handleChange} id="one" name="crowd" value="1"/>
-    	      <label htmlFor="one">1 &nbsp;</label> 
+    	      <label htmlFor="one">1 &nbsp; </label> 
     	      
     	      <input type="radio" onChange={this.handleChange} id="two" name="crowd" value="2"/>
-    	      <label htmlFor="two">2 &nbsp;</label> 
+    	      <label htmlFor="two">2 &nbsp; </label> 
     	      
     	      <input type="radio" onChange={this.handleChange} id="three" name="crowd" value="3"/>
-    	      <label htmlFor="three">3 &nbsp;</label> 
+    	      <label htmlFor="three">3 &nbsp; </label> 
     	      
     	      <input type="radio" onChange={this.handleChange} id="four" name="crowd" value="4"/>
-    	      <label htmlFor="four">4 &nbsp;</label>
+    	      <label htmlFor="four">4 &nbsp; </label>
     	      
     	      <input type="radio" onChange={this.handleChange} id="five" name="crowd" value="5"/>
     	      <label htmlFor="five">5</label> <br/>
@@ -138,16 +138,16 @@ class App extends Component {
     	     
 
     	      <br/><input type="radio" onChange={this.handleChange} id="one" name="comfort" value="1"/>
-    	      <label htmlFor="one">1 &nbsp;</label> 
+    	      <label htmlFor="one">1 &nbsp; </label> 
     	      
     	      <input type="radio" onChange={this.handleChange} id="two" name="comfort" value="2"/>
-    	      <label htmlFor="two">2 &nbsp;</label> 
+    	      <label htmlFor="two">2 &nbsp; </label> 
     	      
     	      <input type="radio" onChange={this.handleChange} id="three" name="comfort" value="3"/>
-    	      <label htmlFor="three">3 &nbsp;</label> 
+    	      <label htmlFor="three">3 &nbsp; </label> 
     	      
     	      <input type="radio" onChange={this.handleChange} id="four" name="comfort" value="4"/>
-    	      <label htmlFor="four">4 &nbsp;</label> 
+    	      <label htmlFor="four">4 &nbsp; </label> 
     	      
     	      <input type="radio" onChange={this.handleChange} id="five" name="comfort" value="5"/>
     	      <label htmlFor="five">5</label> <br/>
