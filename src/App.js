@@ -72,8 +72,9 @@ class App extends Component {
   }
 
   render() {
-    return (
+    return (      
       <div id = "container">
+      <form method="POST" action="https://swe432-mei-gibbons.herokuapp.com/result" >
         <div align = "center">
           <h1>Best Place to Study on Campus</h1>
           <h2>Fill out the form to rate study areas on campus!</h2>
@@ -154,8 +155,7 @@ class App extends Component {
             <br/>
 
 
-            <Button onClick={this.fetchData} color="primary" data-something="submit">
-                 submit</Button> 
+            <button type="submit">Submit</button>
             <br/> 
 
     			</div>
