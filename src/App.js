@@ -157,7 +157,7 @@ class App extends Component {
 
 
             <Button onClick={this.fetchData} color="primary" data-something="submit">
-                 submit</Button> <br>
+                 submit</Button> <br></br>
 
     			</div>
           <div align = "center">
