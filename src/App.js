@@ -111,7 +111,7 @@ class App extends Component {
     	      <label htmlFor="four">4 &nbsp; </label> 
     	      
     	      <input type="radio"  onChange={this.handleChange} id="five" name="noiseLevel" value="5" />
-    	      <label htmlFor="five">5</label> <br/>
+    	      <label htmlFor="five">5</label>  <br/>
             
 
     	      <br/><strong>Rating for Crowdedness:</strong> (1-way too crowded, 5-hardly any people)
